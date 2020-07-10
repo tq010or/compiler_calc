@@ -18,7 +18,7 @@ from typing import Union
 
 __author__ = "Bo HAN"
 __license__ = "MIT"
-__version__ = "0.0.1"
+__version__ = "0.0.2"
 __email__ = "bohan.academic@gmail.com"
 
 
@@ -105,7 +105,7 @@ class SyntaxAnalysis:
     """Syntax analysis to perform calculations
     """
     def _simple_calculate(self, var1: float, op: str, var2: float) -> float:
-        """Simple calculator for two numeric values and one operator
+        """Simple compiler_calc for two numeric values and one operator
         :param var1: value 1
         :param op: operator
         :param var2: value 2

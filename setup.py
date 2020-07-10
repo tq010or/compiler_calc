@@ -18,7 +18,7 @@ setup(
     name='compiler_calc',
     python_requires='>=3.7.0',
     version=simple_calc.__version__,
-    description="This is a simple calculator when I try to recall my compiler courses.",
+    description="This is a simple compiler_calc when I try to recall my compiler courses.",
     long_description=read_file('README.md'),
     long_description_content_type="text/markdown",
     author=simple_calc.__author__,
@@ -30,7 +30,7 @@ setup(
     install_requires=read_requirements('requirements.txt'),
     include_package_data=True,
     license="MIT",
-    keywords=['calculator', 'syntax analysis', 'lex analysis', 'compiler course'],
+    keywords=['compiler_calc', 'syntax analysis', 'lex analysis', 'compiler course'],
     classifiers=[
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
