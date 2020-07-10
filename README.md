@@ -4,16 +4,16 @@ This is a simple calculator when I try to recall my compiler courses.
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install calc.
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install compiler_calc.
 
 ```bash
-pip install calc 
+pip install compiler_calc 
 ```
 
 ## Usage
 
 ```python
-from calc.simple_calc import LexAnalysis, SyntaxAnalysis
+from compiler_calc.simple_calc import LexAnalysis, SyntaxAnalysis
 
 # To highlight lexcial and syntax analysis
 lex_analyser = LexAnalysis()
