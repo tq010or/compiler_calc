@@ -1,5 +1,5 @@
 from unittest import TestCase
-from calc import SyntaxAnalysis, LexAnalysis
+from calc.simple_calc import SyntaxAnalysis, LexAnalysis
 
 
 class BasicOperations(TestCase):

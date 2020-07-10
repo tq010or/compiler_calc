@@ -1,6 +1,6 @@
 # A simple calculator 
 
-This is a simple calculator when I try to recall my complier courses.
+This is a simple calculator when I try to recall my compiler courses.
 
 ## Installation
 
@@ -13,11 +13,13 @@ pip install calc
 ## Usage
 
 ```python
-from calc import LexAnalysis, SyntaxAnalysis
+from calc.simple_calc import LexAnalysis, SyntaxAnalysis
+
 # To highlight lexcial and syntax analysis
 lex_analyser = LexAnalysis()
 syntax_analyser = SyntaxAnalysis()
 
+# You can define your own helper functions
 def calculate(expr, lex=lex_analyser, syn=syntax_analyser):
     expr_list = lex(expr)
     return syn(expr_list)

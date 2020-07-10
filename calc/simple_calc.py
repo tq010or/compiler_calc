@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 
 """This programmes calculate expressions like "3 + 4 * 5".
-The following operators are supported: +, -, *, /, (, ).
+The following operators are supported: +, -, *, /, ^, (, ).
 The following types are supported: float, int
 
 VAL = 0|1|2|3|4|5|6|7|8|9|0|.   # support integer and float
-OP = +|-|*|/                    # * and / have higher priority than + and -
+OP = +|-|*|/|^                  # ^ is pow function
 EXPR = VAL|EXPR OP EXPR|(EXPR)|-EXPR
 """
 
@@ -17,9 +17,8 @@ from typing import Union
 
 
 __author__ = "Bo HAN"
-__copyright__ = "Copyright 2020, Panda-Lens.com"
 __license__ = "MIT"
-__version__ = "1.0.0"
+__version__ = "0.0.1"
 __email__ = "bohan.academic@gmail.com"
 
 
@@ -29,7 +28,7 @@ OP_DICT = {
     '-': 1,
     '*': 2,
     '/': 2,
-    '^': 3, # pow func
+    '^': 3   # pow func
 }
 # brackets have highest priorities
 LEFT_BRACKET = "("
@@ -211,19 +210,27 @@ class SyntaxAnalysis:
         else:
             return result
 
+
+_lex_analyser = LexAnalysis()
+_syntax_analyser = SyntaxAnalysis()
+
+
+def calculate(expr: str, lex: LexAnalysis = _lex_analyser, syn: SyntaxAnalysis = _syntax_analyser) -> Union[float, int]:
+    expr_list = lex(expr)
+    result = syn(expr_list)
+    return result
+
+
 def main():
-    lex_analyser = LexAnalysis()
-    syntax_analyser = SyntaxAnalysis()
     while True:
         input_data = input("Please enter your expression to calculate (q to exit):\n>>> ")
         if input_data == "q":
             print("See you")
             break
         else:
-            expr_list = lex_analyser(input_data)
-            print(expr_list)
-            result = syntax_analyser(expr_list)
+            result = calculate(input_data)
             print(f"\n>>> '{input_data}' calculation result is '{result}'")
+
 
 if __name__ == "__main__":
     main()
