@@ -18,7 +18,7 @@ from typing import Union
 
 __author__ = "Bo HAN"
 __license__ = "MIT"
-__version__ = "0.0.1rc3"
+__version__ = "0.0.1rc4"
 __email__ = "bohan.academic@gmail.com"
 
 
