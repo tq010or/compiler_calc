@@ -4,10 +4,10 @@ This is a simple calculator when I try to recall my compiler courses.
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install compiler_calc.
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install compiler-calc.
 
 ```bash
-pip install compiler_calc 
+pip install compiler-calc 
 ```
 
 ## Usage
